@@ -14,7 +14,8 @@ string menu(int menu_option)
 	switch (menu_option)
 	{
 	case 1:
-		return "Option 1:";
+		return "Option 1";
+		//Alternative, break; if not return
 	case 2:
 		return "Option 2";
 	case 3: 
