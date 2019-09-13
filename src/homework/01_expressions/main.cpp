@@ -1,5 +1,5 @@
 ﻿//write include statements
-#include"expressions.cpp"
+#include"expressions.h"
 #include <iostream>
 //write namespace using statement for cout
 using std::cout;
