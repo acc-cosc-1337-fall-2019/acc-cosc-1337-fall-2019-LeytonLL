@@ -1,8 +1,8 @@
-#include "while.h"
+#include "do_while.h"
 
 int main() 
 {
-	display("hello");
-	
+	//prompt_user();
+	run_menu();
 	return 0;
 }

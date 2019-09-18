@@ -6,7 +6,7 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("Test while loop sum of squares")
+TEST_CASE("Test while loop sum of squares") 
 {
 	REQUIRE(sum_of_squares(4) == 30);
 	REQUIRE(sum_of_squares(5) == 55);
