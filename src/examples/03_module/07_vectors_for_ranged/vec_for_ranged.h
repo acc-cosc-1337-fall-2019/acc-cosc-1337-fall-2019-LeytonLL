@@ -7,6 +7,7 @@ Write function prototype for function loop_vector_w_auto with no parameters.
 
 */
 
+void lookp_string_w_auto(std::string str);
 /*
 Write function prototype for function loop_vector_w_auto with a vector of int pass by value parameter.
 
