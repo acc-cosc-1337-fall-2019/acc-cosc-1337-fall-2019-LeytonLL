@@ -30,7 +30,7 @@ and displays the numbers to screen using an indexed for loop as follows: 9 10 99
 
 void loop_vector_w_index(std::vector<int> nums)
 {
-
+	nums[0] = 1000;
 	for (int i = 0; i < nums.size(); ++i)
 	{
 		std::cout << nums[i] << "\n";
@@ -72,6 +72,15 @@ void loop_vector_w_for_ranged(const std::vector<int>& nums)
 {
 	for (auto num : nums)
 	{
+		std::cout << num << "\n";
+	}
+}
+
+void loop_vector_w_for_ranged_ref_var(std::vector<int>&nums)
+{
+	for (auto& num : nums)
+	{
+		num = 1000;
 		std::cout << num << "\n";
 	}
 }
