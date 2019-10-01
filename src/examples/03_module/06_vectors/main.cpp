@@ -1,10 +1,12 @@
+#include <string>
 #include "vec.h"
 
 int main() 
 {
 	loop_vector_w_index();
-	std::vector<int> nums = { 99,55,1,3,66 };
-
+	std::vector<int> result = ret_vec_int();
+	std::vector<int> nums(9, 1); //= { 99,55,1,3,66 };
+	std::vector<std::string> strs(9, " ");
 	loop_vector_w_index(nums);
 	
 	loop_vector_w_index_ref(nums);
