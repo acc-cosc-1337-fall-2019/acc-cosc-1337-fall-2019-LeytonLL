@@ -19,10 +19,10 @@ Iterate the vector and display the Area for each Rectangle on one line and the t
 
 int main()
 {
-	vector<Rectanglee> flobots; //bands make for good variable names
-	flobots.push_back(Rectanglee(4, 5));
-	flobots.push_back(Rectanglee(10, 10));
-	flobots.push_back(Rectanglee(100, 10));
+	vector<acc::Rectanglee> flobots; //bands make for good variable names
+	flobots.push_back(acc::Rectanglee(4, 5));
+	flobots.push_back(acc::Rectanglee(10, 10));
+	flobots.push_back(acc::Rectanglee(100, 10));
 
 	//songs also make for good variable names.
 	for (auto mayday : flobots)

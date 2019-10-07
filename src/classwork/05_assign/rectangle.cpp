@@ -8,26 +8,26 @@ has one public function area that returns the area of the rectangle, and one pri
 that calculates area of the rectangle.  The class has 3 int private variables area, width, and height.
 */
 
-Rectanglee::Rectanglee()
+acc::Rectanglee::Rectanglee()
 {
 	width = 0;
 	height = 0;
 	calculate_area();
 }
 
-Rectanglee::Rectanglee(int valuea, int valueb)
+acc::Rectanglee::Rectanglee(int valuea, int valueb)
 {
 	width = valuea;
 	height = valueb;
 	calculate_area();
 }
 
-int Rectanglee::get_area() const
+int acc::Rectanglee::get_area() const
 {
 	return area;
 }
 
-void Rectanglee::calculate_area()
+void acc::Rectanglee::calculate_area()
 {
 	area = width * height;
 }

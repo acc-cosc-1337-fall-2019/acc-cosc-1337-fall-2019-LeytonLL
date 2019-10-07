@@ -10,7 +10,7 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 TEST_CASE("Build first test rectangle")
 {
-	Rectanglee flobot(4, 5);
+	acc::Rectanglee flobot(4, 5);
 	//Rectangle flobots;
 	REQUIRE(flobot.get_area() == 20);
 }
