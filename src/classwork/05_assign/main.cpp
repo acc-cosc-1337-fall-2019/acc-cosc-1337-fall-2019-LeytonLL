@@ -19,7 +19,12 @@ Iterate the vector and display the Area for each Rectangle on one line and the t
 
 int main()
 {
-	vector<acc::Rectanglee> flobots; //bands make for good variable names
+
+	acc::Rectanglee breathe (4, 5);
+	cout << breathe;
+	
+	
+	/*vector<acc::Rectanglee> flobots; //bands make for good variable names
 	flobots.push_back(acc::Rectanglee(4, 5));
 	flobots.push_back(acc::Rectanglee(10, 10));
 	flobots.push_back(acc::Rectanglee(100, 10));
@@ -29,5 +34,5 @@ int main()
 	{
 		cout << "Area : " << mayday.get_area() << "\n";
 	}
-	return 0;
+	return 0; */
 }

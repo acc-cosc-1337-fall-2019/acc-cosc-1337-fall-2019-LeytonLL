@@ -26,5 +26,5 @@ void ATM::withdraw(int amount)
 
 void ATM::display_balance() const
 {
-	cout << "Balance: " << account.get_balance();
+	cout << "Balance: " << account.get_balance() << "\n";
 }

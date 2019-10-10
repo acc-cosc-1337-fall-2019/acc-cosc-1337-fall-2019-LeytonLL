@@ -31,3 +31,17 @@ void acc::Rectanglee::calculate_area()
 {
 	area = width * height;
 }
+
+void display(const acc::Rectanglee& b)
+{
+	std::cout << "Area: " << b.get_area() << "\n";
+}
+
+
+std::ostream & acc::operator << (std::ostream & out,
+	const Rectanglee & b)
+{
+	out << "Area : " << b.get_area() << "\n";
+
+	return out;
+}
