@@ -41,7 +41,7 @@ void display(const acc::Rectanglee& b)
 std::ostream & acc::operator << (std::ostream & out,
 	const Rectanglee & b)
 {
-	out << "Area : " << b.get_area() << "\n";
+	out << "Area : " << b.area << "\n";
 
 	return out;
 }

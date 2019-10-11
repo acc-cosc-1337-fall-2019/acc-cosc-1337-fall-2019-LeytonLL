@@ -24,7 +24,7 @@ int main()
 	cout << breathe;
 	
 	
-	/*vector<acc::Rectanglee> flobots; //bands make for good variable names
+	vector<acc::Rectanglee> flobots; //bands make for good variable names
 	flobots.push_back(acc::Rectanglee(4, 5));
 	flobots.push_back(acc::Rectanglee(10, 10));
 	flobots.push_back(acc::Rectanglee(100, 10));
@@ -32,7 +32,8 @@ int main()
 	//songs also make for good variable names.
 	for (auto mayday : flobots)
 	{
-		cout << "Area : " << mayday.get_area() << "\n";
+		cout << mayday;
 	}
-	return 0; */
+
+	return 0; 
 }
