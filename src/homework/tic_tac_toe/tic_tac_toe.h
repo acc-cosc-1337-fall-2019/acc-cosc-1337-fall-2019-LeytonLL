@@ -1,18 +1,22 @@
 //tic_tac_toe.h
 //Represents one game of tick tack toe
+#ifndef TIC_TAC_TOE_H
+#define TIC_TAC_TOE_H
+
+
 #include <vector>
 #include <string>
 #include <iostream>
 
 using std::string; using std::vector; using std::cout;
 
-class tic_tac_toe {
+class TicTacToe {
 
 public:
-	bool gameover();
-	void startgame(string player);
-	void markboard(int position);
-	string getplayer (" ");
+	bool game_over();
+	void start_game(string player);
+	void mark_board(int position);
+	string get_player () const;
 	void display_board() const;
 
 
@@ -33,3 +37,4 @@ private:
 
 
 };
+#endif // !TIC_TAC_TOE_H
