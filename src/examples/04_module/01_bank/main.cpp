@@ -2,25 +2,37 @@
 #include<vector>
 #include "bank_account.h"
 #include "atm.h"
+#include "customer.h"
 
 using std::cout;
 using std::vector;
 using std::cin;
 int main()
 {
-	BankAccount a;
+	/*BankAccount a;
 	BankAccount b = a;
-	display(a); //class friend function
+	display(a); //class friend function */
 	//scan card and enter pin
 	//get customer records from database into a vector
-	vector<BankAccount> accounts{ BankAccount(500), BankAccount(600), BankAccount(1000) };
+	//vector<BankAccount> accounts{ BankAccount(500), BankAccount(600), BankAccount(1000) };
+	
 
-	ATM atm(accounts[0]);
+
+	/* ATM atm(accounts[0]);
 	atm.deposit(100);
 	atm.withdraw(50);
 	atm.display_balance();  
-	cout << a; //overload operator
+	cout << a; //overload operator */
 
+	
+	
+	
+	Customer customer;
+	customer.add_account(BankAccount(500));
+	customer.add_account(BankAccount(1500));
+	customer.add_account(BankAccount(5000));
+
+	cout << customer;
 	return 0;
 
 
