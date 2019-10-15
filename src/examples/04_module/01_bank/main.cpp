@@ -3,6 +3,7 @@
 #include "bank_account.h"
 #include "atm.h"
 #include "customer.h"
+#include "checking_account.h"
 
 using std::cout;
 using std::vector;
@@ -27,13 +28,13 @@ int main()
 	
 	
 	
-	Customer customer;
+	/* Customer customer;
 	customer.add_account(BankAccount(500));
 	customer.add_account(BankAccount(1500));
 	customer.add_account(BankAccount(5000));
 
 	cout << customer;
-	return 0;
+	return 0; */
 
 
 
@@ -50,4 +51,14 @@ int main()
 	}
 
 	return 0; */
+
+
+	CheckingAccount a(1500);
+	cout << a.get_balance;
+	//CheckingAccount a(1000);
+
+	return 0;
+
+
+
 }
