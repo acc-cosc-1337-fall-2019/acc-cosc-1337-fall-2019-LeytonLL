@@ -27,9 +27,11 @@ int main()
 				cin >> position;
 			}
 
-			board.mark_board(position);
+			cin >> board;
+			
 			position = 0;
-			board.display_board();
+			cout << board;
+			//board.display_board();
 		}
 
 		cout << "Game over: \n";
