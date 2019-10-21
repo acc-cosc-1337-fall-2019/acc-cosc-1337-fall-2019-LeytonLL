@@ -17,9 +17,8 @@ public:
 	void start_game(string player);
 	void mark_board(int position);
 	string get_player () const;
-	//void display_board() const;
 	friend std::istream& operator >> (std::istream& in,
-		const TicTacToe& b);
+		TicTacToe& b);
 	friend std::ostream& operator << (std::ostream& out,
 		const TicTacToe& b);
 

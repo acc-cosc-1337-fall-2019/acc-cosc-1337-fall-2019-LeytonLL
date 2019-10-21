@@ -10,7 +10,6 @@ int main()
 {
 	auto response = 'y';
 	TicTacToe board;
-	auto position = 0;
 	string player = "";
 
 	do 
@@ -21,17 +20,8 @@ int main()
 
 		while (!board.game_over()) 
 		{
-			while (position < 1 || position > 9)
-			{
-				cout << "Enter position from 1 to 9\n";
-				cin >> position;
-			}
-
 			cin >> board;
-			
-			position = 0;
 			cout << board;
-			//board.display_board();
 		}
 
 		cout << "Game over: \n";
