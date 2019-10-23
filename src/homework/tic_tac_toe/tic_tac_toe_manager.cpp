@@ -18,7 +18,7 @@ ostream & operator<<(ostream & out, const TicTacToeManager & m)
 
 void TicTacToeManager::save_game(const TicTacToe game)
 {
-	update_winner_count(game.get_winner); 
+	update_winner_count(game.get_winner()); 
 	games.push_back(game);
 
 }

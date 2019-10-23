@@ -1,4 +1,5 @@
-#include "tic_tac_toe.h"
+
+#include "tic_tac_toe_manager.h"
 #include<iostream>
 #include<string>
 
@@ -9,20 +10,25 @@ using std::string;
 int main() 
 {
 	auto response = 'y';
-	TicTacToe board;
+	TicTacToeManager manager;
+	
 	string player = "";
 
 	do 
 	{
+		TicTacToe game;
+
 		cout << "Enter X or O";
 		cin >> player;
-		board.start_game(player);
+		game.start_game(player);
 
-		while (!board.game_over()) 
+		while (game.game_over() == false) 
 		{
-			cin >> board;
-			cout << board;
+			cin >> game;
+			cout << game;
 		}
+
+		manager.save_game(game);
 
 		cout << "Game over: \n";
 		cout << "Continue y or n ";
@@ -30,6 +36,9 @@ int main()
 
 	
 	} while (response == 'y' || response == 'Y');
+
+	cout << "History: \n";
+	cout << manager;
 
 
 

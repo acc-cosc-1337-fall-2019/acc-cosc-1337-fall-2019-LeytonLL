@@ -28,11 +28,8 @@ when you save position - 1*/
 void TicTacToe::mark_board(int position)
 {
 	pegs[position - 1] = next_player;
-
-	if (game_over() == false)
-	{
 		set_next_player();
-	}
+	
 
 	}
 
