@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "tic_tac_toe.h"
+#include "tic_tac_toe_manager.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -185,4 +186,70 @@ TEST_CASE("Test for no winner")
 
 	//no one wins 
 	REQUIRE(board.game_over() == true);
+}
+
+TEST_CASE("Test for winner C")
+{
+	TicTacToe board;
+	board.start_game("X");
+	board.mark_board(1);//X    
+	REQUIRE(board.game_over() == false);
+	board.mark_board(2);//O        
+	REQUIRE(board.game_over() == false);
+	board.mark_board(3);//X          
+	REQUIRE(board.game_over() == false);
+	board.mark_board(5);//O          
+	REQUIRE(board.game_over() == false);
+	board.mark_board(4);//X 
+	REQUIRE(board.game_over() == false);
+	board.mark_board(7);//O    
+	REQUIRE(board.game_over() == false);
+	board.mark_board(9);//X 
+	REQUIRE(board.game_over() == false);
+	board.mark_board(6);//O    
+	REQUIRE(board.game_over() == false);
+	board.mark_board(8);//X 
+	REQUIRE(board.game_over() == true);
+
+
+	//no one wins 
+	REQUIRE(board.get_winner() == "C");
+}
+
+TEST_CASE("Test for winner X")
+{
+	TicTacToe board;
+	board.start_game("X");
+	REQUIRE(board.game_over() == false);
+	board.mark_board(7);//X         
+	REQUIRE(board.game_over() == false);
+	board.mark_board(2);//O          
+	REQUIRE(board.game_over() == false);
+	board.mark_board(5);//X          
+	REQUIRE(board.game_over() == false);
+	board.mark_board(1);//O          
+	REQUIRE(board.game_over() == false);
+	board.mark_board(3);//X 
+	//X wins 
+	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "X");
+}
+
+TEST_CASE("Test for winner O")
+{
+	TicTacToe board;
+	board.start_game("O");
+	REQUIRE(board.game_over() == false);
+	board.mark_board(1);//O         
+	REQUIRE(board.game_over() == false);
+	board.mark_board(2);//X          
+	REQUIRE(board.game_over() == false);
+	board.mark_board(4);//O          
+	REQUIRE(board.game_over() == false);
+	board.mark_board(5);//X          
+	REQUIRE(board.game_over() == false);
+	board.mark_board(7);//O 
+	//O wins 
+	REQUIRE(board.game_over() == true);
+	REQUIRE(board.get_winner() == "O");
 }

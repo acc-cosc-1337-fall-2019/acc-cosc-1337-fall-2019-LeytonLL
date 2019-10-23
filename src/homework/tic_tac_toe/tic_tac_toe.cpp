@@ -6,6 +6,7 @@ bool TicTacToe::game_over()
 	if (check_column_win() || check_diagonal_win() || 
 		check_row_win())
 	{
+		TicTacToe::set_winner();
 		return true;
 	}
 	else if (check_board_full())
@@ -28,7 +29,7 @@ when you save position - 1*/
 void TicTacToe::mark_board(int position)
 {
 	pegs[position - 1] = next_player;
-		set_next_player();
+	set_next_player();
 	
 
 	}
@@ -121,8 +122,6 @@ bool TicTacToe::check_board_full()
 
 void TicTacToe::set_winner()
 {
-
-
 	if (next_player == "X")
 	{
 		winner = "O";
