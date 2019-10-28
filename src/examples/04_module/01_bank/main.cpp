@@ -13,16 +13,10 @@ using std::cin;
 using std::reference_wrapper;
 int main()
 {
-	CheckingAccount c(1500);
-	SavingsAccount s(500);
-
-	vector<reference_wrapper <BankAccount>>	accounts 
-	{ c, s };
 	
-	for (auto act : accounts)
-	{
-		cout << "Balance: " << act.get().get_balance() << "\n";
-	}
+	int num = 5;
+	int & num_ref = num;
+	std::cout << "Address: " << &num_ref;
 
 	return 0;
 

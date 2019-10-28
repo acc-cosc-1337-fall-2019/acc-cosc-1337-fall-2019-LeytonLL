@@ -15,6 +15,13 @@ int main()
 	line->draw();
 	delete line;
 
+
+
+
+
+
+
+
 	//vector of Shape pointers
 	std::vector<Shape*> shapes{new Line(), new Circle()};
 
