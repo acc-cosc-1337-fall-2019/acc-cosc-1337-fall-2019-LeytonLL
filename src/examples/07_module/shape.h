@@ -1,7 +1,15 @@
 //shape.h
+#ifndef SHAPE_H
+#define SHAPE_H
+#include<iostream>
+using std::cout;
+ // !SHAPE_H
+
 
 class Shape
 {
 public:
-	virtual void draw(){}
+	virtual void draw() = 0; //pure virtual function, abstract class
 };
+
+#endif
