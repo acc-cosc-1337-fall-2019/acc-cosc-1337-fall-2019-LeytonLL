@@ -4,9 +4,11 @@
 #include"tic_tac_toe.h"
 #include <vector>
 #include <iostream>
+#include <functional>
 
 using std::vector;
 using std::ostream;
+using std::reference_wrapper;
 
 class TicTacToeManager
 {
@@ -17,7 +19,7 @@ public:
 
 private:
 	void update_winner_count(string winner);
-	vector <TicTacToe> games;
+	vector <reference_wrapper <TicTacToe>> games;
 	int x_win{ 0 };
 	int o_win{ 0 };
 	int ties{ 0 };
