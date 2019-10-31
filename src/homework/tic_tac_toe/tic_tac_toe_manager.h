@@ -13,7 +13,7 @@ using std::reference_wrapper;
 class TicTacToeManager
 {
 public:
-	void save_game(const TicTacToe game);
+	void save_game(TicTacToe& game);
 	friend ostream& operator<<(ostream& out, const TicTacToeManager& m);
 
 
