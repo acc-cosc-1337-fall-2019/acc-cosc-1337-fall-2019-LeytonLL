@@ -14,7 +14,7 @@ int main()
 //tic TacToe3
 {
 	auto response = 'y';
-	TicTacToeManager manager;
+	unique_ptr<TicTacToeManager> manager = std::make_unique<TicTacToeManager>();
 	string player = "";
 	int game_type;
 
@@ -23,16 +23,16 @@ int main()
 	{
 		cout << "Play win by 3 or 4: ";
 		cin >> game_type;
-		TicTacToe* game;
+		unique_ptr<TicTacToe> game;
 
 		if(game_type == 3)
 		{ 
-			game = new TicTacToe3();
+			game = std::make_unique<TicTacToe3>();
 		
 		}
 		else
 		{
-			game = new TicTacToe4();
+			game = std::make_unique<TicTacToe4>();
 
 
 		}
@@ -49,7 +49,7 @@ int main()
 			cout << *game;
 		}
 
-		manager.save_game(*game);
+		manager->save_game(game);
 
 		cout << "Game over: \n";
 		cout << "Continue y or n ";
@@ -59,7 +59,7 @@ int main()
 	} while (response == 'y' || response == 'Y');
 
 	cout << "History: \n";
-	cout << manager;
+	cout << *manager;
 
 
 
