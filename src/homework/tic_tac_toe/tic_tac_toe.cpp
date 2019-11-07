@@ -136,3 +136,9 @@ std::ostream& operator<<(std::ostream& out, const TicTacToe& t)
 
 	return out;
 }
+
+
+const std::vector<std::string>&TicTacToe::get_pegs()
+{
+	return pegs; 
+}
