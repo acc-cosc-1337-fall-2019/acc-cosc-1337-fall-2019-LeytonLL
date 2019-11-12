@@ -1,6 +1,6 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
-#include "shape.h"
+#include "../src/examples/10_module/01_shapes/shape.h"
 #include "point.h"
 
 namespace acc
