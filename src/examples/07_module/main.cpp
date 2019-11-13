@@ -2,9 +2,11 @@
 #include <iostream>
 #include<memory>
 #include<vector>
-#include "shape.h"
-#include "line.h"
-#include "circle.h"
+#include"../07_module/shape.h"
+#include"../07_module/line.h"
+#include"../07_module/circle.h"
+
+using mod7ex::Shape; using mod7ex::Line; using mod7ex::Circle;
 
 int main() 
 {
@@ -15,40 +17,26 @@ int main()
 	line->draw();
 	delete line;
 
-
-
-
-
-
-
-
-	//vector of Shape pointers
-	std::vector<Shape*> shapes{new Line(), new Circle()};
-
-	for (auto& shape : shapes) 
+	std::vector < Shape *> shapes{ new Line(), new Circle() };
+	//using a reference operator
+	for (auto & shape : shapes)
 	{
 		shape->draw();
 	}
+	std::cout << std::endl;
+	for (auto * shape : shapes)
+	{
+		shape->draw();
+	}
+	   	  	
+	std::unique_ptr < Shape > line2 = std::make_unique< Line >();
+	line2->draw();
 
-	std::cout << "\n";
+	std::vector <std::unique_ptr < Shape >> shapes2;
+	shapes2.push_back(std::make_unique< Line >());
+	shapes2.push_back(std::make_unique< Circle >());
 	
-	for (auto* shape : shapes)
-	{
-		shape->draw();
-	}
-
-	std::cout << "\n";
-
-	//Shape instance using Smart Pointer
-	std::unique_ptr<Shape> l = std::make_unique<Line>();
-	l->draw();
-
-	//vector of Shape instances using Smart Pointers
-	std::vector <std::unique_ptr < Shape >> shaps;
-	shaps.push_back(std::make_unique< Line >());
-	shaps.push_back(std::make_unique< Circle >());
-
-	for (auto & shape : shaps)
+	for (auto & shape : shapes2)
 	{
 		shape->draw();
 	}
