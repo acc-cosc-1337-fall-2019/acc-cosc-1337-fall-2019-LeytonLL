@@ -61,10 +61,10 @@ TEST_CASE("Test reserve function new allocation")
 TEST_CASE("Test resize capability new function")
 {
 	Vector v;
-	REQUIRE(v.Capacity = 0);
+	REQUIRE(v.Capacity() == 0);
 	v.Resize(10);
 
-	REQUIRE(v.Capacity == 10);
+	REQUIRE(v.Capacity() == 10);
 }
 
 TEST_CASE("TEST push back w a defeault constructor")

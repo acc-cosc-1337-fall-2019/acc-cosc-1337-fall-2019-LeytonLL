@@ -1,8 +1,4 @@
 #include "vector.h"
-#include "vector.h"
-#include "vector.h"
-#include "vector.h"
-#include "vector.h"
 #include <iostream>
 Vector::Vector()
 	: size{ 0 }, nums{ nullptr }, space{ 0 }
