@@ -32,7 +32,7 @@ Vector<T>::Vector(const Vector<T>& v)
 template<typename T>
 Vector<T>& Vector<T>::operator=(const Vector<T>& v)
 {
-	/* if (this == &v) //avoid self copy
+	 if (this == &v) //avoid self copy
 {
 	return *this;
 }
@@ -45,7 +45,7 @@ if (space <= space)
 	size = v.size;
 
 	return *this;
-}*/
+}
 
 //T* temp  = new int[v.size];
 
