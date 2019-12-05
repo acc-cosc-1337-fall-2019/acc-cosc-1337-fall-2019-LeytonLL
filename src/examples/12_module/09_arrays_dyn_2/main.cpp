@@ -3,6 +3,8 @@
 
 int main() 
 {
+	Report r;
+	r.display();
 	
 
 	return 0;
